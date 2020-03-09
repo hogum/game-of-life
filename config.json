@@ -1,0 +1,23 @@
+{    
+    "patterns": [
+        "glider",
+        "beacon",
+        "bee_hive",
+        "block",
+        "boat",
+        "loaf",
+        "gosper_glider_gun",
+        "diehard",
+        "r_pentomino",
+        "toad",
+        "tub",
+        "pulsar",
+        "blinker"
+    ],
+    
+    "evolutions": 1000,
+    
+    "delay_interval": 0.1
+}
+
+

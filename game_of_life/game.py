@@ -2,7 +2,11 @@
     Game Environment and Transition control
 """
 
+import os
+import json
+
 from dataclasses import dataclass, field
+
 
 import numpy as np
 
@@ -67,7 +71,18 @@ class Runner:
     """
         Handles loading of the game and
         interations with user
+
+        Parameters
+        ----------
+        data_path: str
+            - absolute path to the pattern files
     """
+
+    def __init__(self, data_path='.data/'):
+        if not os.path.exists(data_path):
+            raise TypeError(
+                "Invalid path. Pass an existing path to the patters, cool?")
+        self.data_path = data_path
 
     @classmethod
     def run(cls, n_evolutions=100, pause=.1):
@@ -98,4 +113,30 @@ class Runner:
             sleep(pause)
 
     def load_config(self):
-        ...
+        """
+            Loads the JSON game config data
+        """
+        cfg_path = '../config.json'
+
+        with open(cfg_path, 'r') as cfg:
+            cfg_data = json.load(cfg)
+            return cfg_data
+    def init_pattern(self, pattern_name):
+        """
+            Converts a given GOL pattern in text format
+            to an array
+        """
+        path = os.path.join(self.data_path, pattern_name)
+        raw_patern = np.loadtxt(path, dtype=str )
+        p = []
+        for i, char in enumerate(raw_patern):
+            print(i, char)
+            p[i] = list(char)
+        print(raw_patern)
+
+        for x in raw_patern:
+            if x not in (0,1):
+                print(f'f: {x}')
+        if np.any(raw_patern not in (0, 1)):
+            raise ValueError('Pattern should have `.` and `X` only')
+        print(raw_patern)
