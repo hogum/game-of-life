@@ -10,9 +10,9 @@ data = ['beacon',  'bee_hive',  'blinker', ' block', 'boat',
 
 setuptools.setup(
     name="game-of-life-MUGOH",
-    version="0.0.11",
+    version="0.0.16",
     include_package_data=True,
-    package_data={'game_of_life': ['game_of_life/.data/*']},
+    package_data={'game_of_life': ['game_of_life/.data/*', 'config.json']},
     author="mugoh",
     author_email="mugoh.ks@gmail.com",
     description="Conway's game of life in python",
