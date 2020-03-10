@@ -1,0 +1,16 @@
+language: python
+cache:
+    pip: true
+python:
+- "3.7"
+
+before_script:
+- pip install coverage
+- pip install coveralls
+- pip install numpy
+
+script:
+- coverage run --source=game_of_life/ -m pytest  && coverage report -m
+
+after_success:
+- coveralls

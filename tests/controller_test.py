@@ -7,6 +7,7 @@ import numpy as np
 
 from game_of_life.controller import Runner
 from game_of_life.game import Universe
+from game_of_life import controller
 
 
 class TesetRunner(TestCase):
@@ -76,3 +77,14 @@ class TesetRunner(TestCase):
         with mock.patch('builtins.input', side_effect=user_input):
             res = self.runner._prompt_user()
         self.assertIsInstance(res, str)
+
+    def test_run_game(self):
+        """
+            On successful user prompt, the game creates
+            generations
+        """
+        m = Runner()
+        m._prompt_user = mock.MagicMock(return_value = 'loaf')
+        m.cfg['evolutions'] = 3
+        m.run(3, 0)
+
