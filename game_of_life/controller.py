@@ -1,5 +1,5 @@
 """
-    Handles the Game's Input Input
+    Handles the Game's Input Output
 """
 
 import os

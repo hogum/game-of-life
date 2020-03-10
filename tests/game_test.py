@@ -1,4 +1,6 @@
-"Game Environment test"
+"""
+    Game Environment test
+"""
 import unittest
 
 from game_of_life.game import Universe
