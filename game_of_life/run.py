@@ -1,17 +1,14 @@
 """
     Starter file
 """
-from game import Runner
+from controller import Runner
 
 
 def run():
     """
         Starts the game
     """
-    # Runner.run(n_evolutions=4, pause=0.3)
-    c = Runner()
-    c.run()
-    # c.init_pattern('glider')
+    Runner().run()
 
 
 if __name__ == '__main__':
