@@ -2,11 +2,14 @@ import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
-data = ['beacon',  'bee_hive',  'blinker', ' block', 'boat',  'diehard', ' glider', ' glider__',
-    'gosper_glider_gun',  '__init__.py', 'loaf'  'pulsar', 'r_pentominoi', 'toad', 'tub']
+
+data = ['beacon',  'bee_hive',  'blinker', ' block', 'boat',
+        'diehard', ' glider', ' glider__',
+        'gosper_glider_gun',  '__init__.py', 'loaf',
+        'pulsar', 'r_pentominoi', 'toad', 'tub']
+
 setuptools.setup(
     name="game-of-life-MUGOH",
-    # include_package_data=True,
     version="0.0.11",
     include_package_data=True,
     package_data={'game_of_life': ['game_of_life/.data/*']},
