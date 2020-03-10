@@ -10,7 +10,8 @@ def run():
     """
     # Runner.run(n_evolutions=4, pause=0.3)
     c = Runner()
-    c.init_pattern('glider')
+    c.run()
+    # c.init_pattern('glider')
 
 
 if __name__ == '__main__':
