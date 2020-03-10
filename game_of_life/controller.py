@@ -97,7 +97,7 @@ class Runner:
         print('\tThe Game of Life is best played while sipping' +
               ' coffee amid soothing sounds of a Spanish lullaby', '\n')
         print('Ready to rock:)?', ' [y/n]', end=' ')
-        ans = input()
+        ans = input().lower()
 
         while not ans or ans not in ('y', 'n'):
             ans = input()
@@ -168,7 +168,7 @@ class Runner:
 
         pattern = pattern.astype(np.int64, copy=False)
         check = pattern[(pattern != 1) & (pattern != 0)]
-        if check:
+        if np.any(check):
             raise ValueError(
                 'Found invalid characters in pattern.Use `.` and `X`')
         return pattern

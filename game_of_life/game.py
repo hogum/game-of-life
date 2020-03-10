@@ -2,7 +2,7 @@
     Game Environment and Transition control
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
@@ -21,7 +21,7 @@ class Universe:
     """
     size: tuple = (10, 10)
     random: bool = False
-    world: None = field(init=False)
+    world: list = None
 
     def evolve(self, world):
         """
