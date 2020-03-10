@@ -14,10 +14,11 @@ git clone https://github.com/hogum/game-of-life
 ```
 python3 setup.py install
 ```
-##### ~~2. Install using pip ~~
-```
+###### ~~2. Install using pip~~
+
+
 ~~pip install game-of-life-MUGOH==0.0.11~~
-```
+
 
 #### Testing
 Run
