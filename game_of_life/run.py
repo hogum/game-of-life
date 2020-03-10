@@ -1,10 +1,10 @@
 """
     Starter file
 """
-from controller import Runner
+from .controller import Runner
 
 
-def run():
+def run_():
     """
         Starts the game
     """
@@ -12,4 +12,4 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    run_()

@@ -7,7 +7,7 @@ import json
 
 import numpy as np
 
-from game import Universe
+from .game import Universe
 
 
 class Runner:
@@ -21,10 +21,11 @@ class Runner:
             - absolute path to the pattern files
     """
 
-    def __init__(self, data_path='.data/'):
+    def __init__(self, data_path='game_of_life/.data/'):
         if not os.path.exists(data_path):
             raise TypeError(
-                "Invalid path. Pass an existing path to the patters, cool?")
+                "Invalid path. Pass an existing path to the " +
+                "patterns file, cool?")
         self.data_path = data_path
         self.load_config()
 
@@ -47,7 +48,7 @@ class Runner:
         pattern = self.init_pattern(pattern_name)
         n_evolutions, pause, print_Xs = self.cfg.get(
             'evolutions'), self.cfg.get(
-                    'delay_interval'), self.cfg.get('display_X')
+            'delay_interval'), self.cfg.get('display_X')
 
         for i in range(n_evolutions):
             world.evolve(pattern)
@@ -129,7 +130,7 @@ class Runner:
         """
             Loads the JSON game config data
         """
-        cfg_path = '../config.json'
+        cfg_path = 'game_of_life/../config.json'
 
         with open(cfg_path, 'r') as cfg:
             cfg_data = json.load(cfg)
