@@ -8,12 +8,23 @@
 ##### 1. Install the Package
 - Clone
 ```
-git clone https://github.com/hogum/game-of-life
+git clone https://github.com/hogum/game-of-life && cd game_of_life
 ```
+
+- Start the Game
+```
+python3 run
+```
+
+-------------------------
+
+Optionally, install the package locally
 - Install
 ```
 python3 setup.py install
 ```
+Ensure to have the `config.json` in the root of the repository
+and a data folder holdind the game patterns in the format: `game_of_life/.data/pattern_files`. If missing, they will be downloaded.
 ###### ~~2. Install using pip~~
 
 
