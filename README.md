@@ -5,44 +5,48 @@
 [Game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) implementation in the python standard library and numpy
 
 #### Setup
-##### 1. Install the Package
-- Clone
+##### 1. Initiliazing the Game
+- Get a cloned local copy
 ```
-git clone https://github.com/hogum/game-of-life && cd game_of_life
+    git clone https://github.com/hogum/game-of-life
 ```
 
-- Start the Game
+**Switch to the working directory**
+
 ```
-python3 run
+    cd game_of_life
+```
+
+**Starting the Game**
+- You need to have `numpy` installed: `pip install -r requirements.txt` or simply `pip install numpy`
+- Then simply start the game with:
+```
+    python3 run
 ```
 
 -------------------------
 
-Optionally, install the package locally
-- Install
+
+#### Testing
+- In the root directory, run:
+```
+    pytest
+```
+----------------------------------------------
+
+
+##### Optionally, you could opt to install the package locally
+
+**Either**
 ```
 python3 setup.py install
 ```
 Ensure to have the `config.json` in the root of the repository
-and a data folder holdind the game patterns in the format: `game_of_life/.data/pattern_files`. If missing, they will be downloaded.
-###### ~~2. Install using pip~~
+and a data folder holdind the game patterns in the format: `game_of_life/.data/pattern_files`
 
 
-~~pip install game-of-life-MUGOH==0.0.11~~
+**Or**
 
-
-#### Testing
-Run
 ```
-pytest
-```
-
-### Playing the Game
-```
-example
-
-from game_of_life import play
-
-if __name__ == '__main__':
-    play()
+    pip install game-of-life-MUGOH==0.0.11
 ```
