@@ -42,7 +42,7 @@
 python3 setup.py install
 ```
 Ensure to have the `config.json` in the root of the repository
-and a data folder holdind the game patterns in the format: `game_of_life/.data/pattern_files`
+and a data folder holdind the game patterns in the path: `game_of_life/.data/*`
 
 
 **Or**
