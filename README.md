@@ -20,6 +20,10 @@
 **Starting the Game**
 - You need to have `numpy` installed: `pip install -r requirements.txt` or simply `pip install numpy`
 - Then simply start the game with:
+
+Required **Python version: > `3.7`**. For versions below 3.7, install python `dataclasses` first with `pip3 install dataclasses` as it won't be in the std lib.
+
+Then start the game with:
 ```
     python3 run
 ```
