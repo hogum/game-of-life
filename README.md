@@ -14,7 +14,7 @@
 **Switch to the working directory**
 
 ```
-    cd game_of_life
+    cd game-of-life
 ```
 
 **Starting the Game**
